@@ -1,0 +1,5 @@
+FROM nginx
+
+RUN apt update && install install dnsutils net-tools -y && apt clean
+
+COPY index.html  /usr/share/nginx/html
